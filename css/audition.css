@@ -1,0 +1,216 @@
+/* =========================
+   AUDITION PAGE
+========================= */
+
+.contact-section {
+  padding: 55px 5% 100px;
+  background: var(--main-pink);
+}
+
+/* 페이지 상단 */
+
+.contact-section .section-topline {
+  margin-bottom: 35px;
+}
+
+/* 전체 레이아웃 */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  padding-top: 20px;
+  align-items: start;
+}
+
+/* 왼쪽 타이틀 */
+
+.contact-heading {
+  min-width: 0;
+}
+
+.contact-heading h1 {
+  margin-top: 20px;
+  font-size: clamp(65px, 11vw, 145px);
+  line-height: 0.85;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+}
+
+.contact-description {
+  margin-top: 25px;
+  font-size: 13px;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+/* =========================
+   APPLICATION FORM
+========================= */
+
+/* 흰색 폼 박스 */
+
+.contact-form {
+  width: 100%;
+  min-width: 0;
+  padding: 25px;
+  background: var(--point-white);
+}
+
+/* 폼 제목 */
+
+.contact-form::before {
+  content: "APPLICATION FORM";
+  display: block;
+  margin-bottom: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* 입력 영역 */
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* 각 입력 항목 */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+/* 입력 항목 이름 */
+
+.form-group label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* 입력창 공통 */
+
+.form-group input {
+  width: 100%;
+  min-width: 0;
+  height: 45px;
+  padding: 0 13px;
+  border: 1px solid var(--line-color);
+  border-radius: 0;
+  outline: none;
+  background: var(--point-white);
+  color: var(--text-black);
+  font-size: 12px;
+  transition: border-color 0.3s;
+}
+
+/* 입력창 클릭 */
+
+.form-group input:focus {
+  border-color: var(--text-black);
+}
+
+/* 안내 문구 */
+
+.form-group input::placeholder {
+  color: #999999;
+}
+
+/* 파일 선택 */
+
+.form-group input[type="file"] {
+  height: auto;
+  min-height: 45px;
+  padding: 12px;
+  font-size: 10px;
+}
+
+/* 제출 버튼 */
+
+.submit-btn {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 5px;
+  padding: 15px;
+  border: 1px solid var(--text-black);
+  border-radius: 0;
+  background: var(--text-black);
+  color: var(--point-white);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--point-white);
+  color: var(--text-black);
+}
+
+/* 하단 안내 */
+
+.form-notice {
+  margin-top: 20px;
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--sub-gray);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 75px 5% 110px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: start;
+  }
+
+  .contact-heading h1 {
+    font-size: clamp(75px, 9vw, 120px);
+  }
+
+  .contact-form {
+    padding: 35px;
+  }
+}
+
+/* =========================
+   PC
+========================= */
+
+@media (min-width: 1024px) {
+  .contact-section {
+    padding: 90px 5% 130px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .contact-heading h1 {
+    font-size: clamp(110px, 10vw, 155px);
+  }
+
+  .contact-form {
+    padding: 45px;
+  }
+
+  .contact-form form {
+    gap: 25px;
+  }
+}

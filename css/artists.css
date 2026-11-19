@@ -1,0 +1,200 @@
+/* =========================
+   ARTISTS PAGE
+========================= */
+
+.artists-main {
+  width: 100%;
+}
+
+/* 상단 제목 */
+.artists-heading {
+  width: 100%;
+}
+
+.section-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.artists-title {
+  padding: 25px 0 35px;
+}
+
+.artists-title > span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.artists-title h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin: 10px 0;
+  font-weight: 800;
+}
+
+.artists-title p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 멤버 카드 전체 */
+.artist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 0 auto;
+}
+
+/* 멤버 카드 */
+.artist-card {
+  display: flex;
+  width: 100%;
+  min-height: 420px;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* 사진과 프로필 좌우 반전 */
+.artist-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 프로필 영역 */
+.artist-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  color: #111111;
+}
+
+.artist-number {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #999999;
+  font-weight: 700;
+}
+
+.artist-profile h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 18px 0 5px;
+  letter-spacing: -1px;
+}
+
+.artist-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.artist-line {
+  width: 45px;
+  height: 2px;
+  background: #111111;
+  margin: 25px 0;
+}
+
+.artist-description {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #555555;
+  word-break: keep-all;
+}
+
+/* 멤버 사진 영역 */
+.artist-photo {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: #111111;
+}
+
+.artist-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.artist-card:hover .artist-photo img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .artist-card {
+    min-height: 350px;
+  }
+
+  .artist-profile {
+    padding: 30px;
+  }
+
+  .artist-profile h2 {
+    font-size: 30px;
+  }
+
+  .artist-photo img {
+    min-height: 350px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .artists-main {
+    padding: 0 18px 50px;
+  }
+
+  .artists-title h1 {
+    font-size: 32px;
+  }
+
+  .artist-list {
+    gap: 25px;
+  }
+
+  .artist-card,
+  .artist-card.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .artist-profile {
+    padding: 30px 25px;
+    min-height: 230px;
+  }
+
+  .artist-profile h2 {
+    font-size: 30px;
+    margin: 12px 0 5px;
+  }
+
+  .artist-description {
+    font-size: 13px;
+  }
+
+  .artist-photo img {
+    width: 100%;
+    height: 320px;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+}

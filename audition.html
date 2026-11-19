@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUDITION | 3Y CORPORATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/audition.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="header">
+        <div class="header-inner">
+          <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="3Y CORPORATION 로고" />
+            <span>3Y CORPORATION</span>
+          </a>
+
+          <div class="header-actions">
+            <a href="audition.html" class="contact-link">
+              <span class="contact-dot"></span>
+              CONTACT US
+            </a>
+
+            <input type="checkbox" id="menu-toggle" />
+
+            <label
+              for="menu-toggle"
+              class="menu-button"
+              aria-label="메뉴 열기 및 닫기"
+            >
+              <span></span>
+              <span></span>
+            </label>
+
+            <nav class="nav" aria-label="주 메뉴">
+              <a href="index.html">HOME</a>
+              <a href="about.html">ABOUT</a>
+              <a href="artists.html">ARTISTS</a>
+              <a href="audition.html">AUDITION</a>
+              <a href="location.html">LOCATION</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="contact-section">
+          <div class="section-topline">
+            <span>03 / AUDITION</span>
+            <span>JOIN OUR TEAM</span>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-heading">
+              <p class="eyebrow">YOUR NEXT STEP</p>
+
+              <h1>SHOW<br />YOUR<br />TALENT</h1>
+
+              <p class="contact-description">
+                새로운 가능성을 보여주세요.<br />
+                여러분의 도전을 기다립니다.
+              </p>
+            </div>
+
+            <div class="contact-form">
+              <form
+                id="audition-form"
+                action="#"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group">
+                  <label for="name">NAME</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="이름을 입력해 주세요"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="age">AGE</label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    placeholder="나이를 입력해 주세요"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-MAIL</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="이메일을 입력해 주세요"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile">PROFILE FILE</label>
+                  <input
+                    type="file"
+                    id="profile"
+                    name="profile"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  SEND APPLICATION ↗
+                </button>
+              </form>
+
+              <p
+                class="form-notice"
+                id="form-status"
+                role="status"
+                aria-live="polite"
+              >
+                제출 결과가 여기에 표시됩니다.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-top">
+          <a href="index.html" class="footer-logo"> 3Y CORPORATION </a>
+
+          <a href="#" class="back-top"> BACK TO TOP ↑ </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>MUSIC & ARTIST MANAGEMENT</p>
+          <p>© 3Y CORPORATION. ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+    <script src="js/audition.js"></script>
+  </body>
+</html>
